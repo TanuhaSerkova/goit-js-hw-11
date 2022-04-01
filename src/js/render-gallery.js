@@ -4,8 +4,7 @@ const gallery = document.querySelector('.gallery')
 const galleryEl = document.querySelector('.gallery .a')
 
 function renderGallery(images) {
-    const markup = images
-    .map(image => {
+    const markup = images.map(image => {
     const { id, largeImageURL, webformatURL, tags, likes, views, comments, downloads } = image
     return `
         <a class="gallery__link" href="${largeImageURL}">
@@ -20,8 +19,7 @@ function renderGallery(images) {
         </div>
         </a>
         `
-    })
-    .join('')
+    }).join('')
 
     gallery.insertAdjacentHTML('beforeend', markup)
 }
